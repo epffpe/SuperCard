@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JYg-XK-fcK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kH-ED-c86" customClass="PlayingCardView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="8f6-9f-4Vs"/>
+                                    <constraint firstAttribute="width" constant="212" id="MQF-dt-0J7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8f6-9f-4Vs"/>
+                                        <exclude reference="MQF-dt-0J7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8f6-9f-4Vs"/>
+                                        <include reference="MQF-dt-0J7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-K3-tYw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animatedDisapear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="agv-vv-ayV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="3kH-ED-c86" secondAttribute="centerY" id="6UX-8r-GKY"/>
+                            <constraint firstAttribute="centerX" secondItem="3kH-ED-c86" secondAttribute="centerX" id="9Iw-Fe-ske"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xgA-K3-tYw" secondAttribute="trailing" constant="137" id="9yI-Ju-hXi"/>
+                            <constraint firstItem="xgA-K3-tYw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="137" id="Ofl-bQ-nrc"/>
+                            <constraint firstItem="3kH-ED-c86" firstAttribute="top" secondItem="xgA-K3-tYw" secondAttribute="bottom" constant="10" id="Pea-nX-TbK"/>
+                            <constraint firstItem="xgA-K3-tYw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="mfy-5I-CcW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3kH-ED-c86"/>
+                                <exclude reference="xgA-K3-tYw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9yI-Ju-hXi"/>
+                                <exclude reference="Ofl-bQ-nrc"/>
+                                <exclude reference="mfy-5I-CcW"/>
+                                <exclude reference="6UX-8r-GKY"/>
+                                <exclude reference="9Iw-Fe-ske"/>
+                                <exclude reference="Pea-nX-TbK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3kH-ED-c86"/>
+                                <include reference="xgA-K3-tYw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9yI-Ju-hXi"/>
+                                <include reference="Ofl-bQ-nrc"/>
+                                <include reference="mfy-5I-CcW"/>
+                                <include reference="6UX-8r-GKY"/>
+                                <include reference="9Iw-Fe-ske"/>
+                                <include reference="Pea-nX-TbK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="OIs-Gx-Wvf"/>
+                    <connections>
+                        <outlet property="playingCardView" destination="3kH-ED-c86" id="qUs-q2-0XE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="137"/>
+        </scene>
+        <!--MAP-->
+        <scene sceneID="im2-Qt-IQa">
+            <objects>
+                <viewController id="ee2-yk-1iS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d6A-8A-w5A"/>
+                        <viewControllerLayoutGuide type="bottom" id="vHs-Jb-qGL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XJG-Id-Hpe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h7I-0e-DPE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h7I-0e-DPE" secondAttribute="trailing" id="1yJ-fK-Qqp"/>
+                            <constraint firstItem="h7I-0e-DPE" firstAttribute="leading" secondItem="XJG-Id-Hpe" secondAttribute="leading" id="Rh8-6R-5eM"/>
+                            <constraint firstAttribute="bottom" secondItem="h7I-0e-DPE" secondAttribute="bottom" id="gzM-R8-XCQ"/>
+                            <constraint firstItem="h7I-0e-DPE" firstAttribute="top" secondItem="XJG-Id-Hpe" secondAttribute="top" id="obX-dt-rs8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="h7I-0e-DPE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1yJ-fK-Qqp"/>
+                                <exclude reference="Rh8-6R-5eM"/>
+                                <exclude reference="gzM-R8-XCQ"/>
+                                <exclude reference="obX-dt-rs8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="h7I-0e-DPE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1yJ-fK-Qqp"/>
+                                <include reference="Rh8-6R-5eM"/>
+                                <include reference="gzM-R8-XCQ"/>
+                                <include reference="obX-dt-rs8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MAP" id="mc8-mw-2Tj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-uv-70B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-697.5" y="801"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xBf-g0-Kkf">
+            <objects>
+                <tabBarController id="JYg-XK-fcK" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="uQu-Rz-h3h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cL3-Zq-Sb4" kind="relationship" relationship="viewControllers" id="Tkh-s0-Tel"/>
+                        <segue destination="ee2-yk-1iS" kind="relationship" relationship="viewControllers" id="T0z-7q-e7d"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="in8-hb-TI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1627.5" y="447"/>
+        </scene>
+        <!--SuperCard-->
+        <scene sceneID="KV9-XZ-KQJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cL3-Zq-Sb4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SuperCard" id="9m4-Zq-DLd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Ni-TD-QWS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Qum-pS-yq1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lB-yp-Wgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.5" y="137"/>
+        </scene>
+    </scenes>
+</document>
